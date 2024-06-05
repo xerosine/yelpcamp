@@ -1,0 +1,6 @@
+<% if ((success && success.length) || (error && error.length)) { %>
+<div class="alert alert-<%= success.length ? 'success' : 'danger' %> alert-dismissible fade show text-center" role="alert">
+    <%= success.length ? success : error %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
