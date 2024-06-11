@@ -1,6 +1,11 @@
+body {
+    background-color: #ddd;
+}
+
 #cluster-map {
     width: 100%;
     height: 500px;
+    max-height: 60vh;
 }
 
 #map {
@@ -8,6 +13,23 @@
     height: 350px;
 }
 
-img {
-    height: 400px;
+.navbar-nav {
+    max-width: 520px;
+}
+
+.index-card {
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11.5px );
+    -webkit-backdrop-filter: blur( 11.5px );
+    border-radius: 10px;
+    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+.userform {
+    max-width: 500px;
+}
+
+.review-container {
+    max-height: 400px;
 }

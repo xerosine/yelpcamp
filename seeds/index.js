@@ -4,7 +4,7 @@ const axios = require("axios");
 const Campground = require("../models/Campground");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1/yelpcamp").then(() => {
+mongoose.connect("mongodb+srv://ayangaoluwamurewa:HjsGRRKULUDttmkT@cluster0.t047gd2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(() => {
   console.log("Mongo Connected!");
 });
 mongoose.connection.on("error", (err) => {
@@ -58,34 +58,20 @@ const seedImg = (imageList) => {
     let pos = Math.floor(Math.random() * 9)
     images.push(imageList[pos])
   }
-  console.log(images);
+  console.log('go');
   return images
 }
-// async () => {
-//   try {
-//     const res = await axios.get("https://api.unsplash.com/collections/483251/photos", {
-//       params: {
-//         client_id: "0VIFLEdCUuw4sld2IpsT8Q4NGbRbcVX25f899H6DVYs",
-//         page: 2,
-//         per_page: 20
-//       },
-//     });
-//     return res;
-//   } catch (err) {
-//     console.error(err);
-//   }
-// };
 
 const seedDB = async () => {
   await Campground.deleteMany({});
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 200; i++) {
     const cityIndex = Math.floor(Math.random() * cities.length);
     const priceVal = Math.floor(Math.random() * 31) + 20;
 
     const camp = new Campground({
       title: `${randomArr(descriptors)} ${randomArr(places)}`,
       location: `${cities[cityIndex].city}, ${cities[cityIndex].state}`,
-      author: '665d0ec4fe19889f9330881c',
+      author: '665fb052d4a2f9a6c7329351',
       price: priceVal,
       geometry: {
         type: 'Point',
