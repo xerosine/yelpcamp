@@ -58,7 +58,7 @@ const sessionConfig = {
     cookie: {
         name: '_ss',
         httpOnly: true,
-        // secure: true,  //for prod only
+        secure: process.env.NODE_ENV === 'production',  //for prod only
         expires: Date.now() + (1000 * 60 * 60 * 24 * 7),
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
