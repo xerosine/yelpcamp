@@ -1,6 +1,5 @@
 const BaseJoi = require('joi')
 const sanitizeHTML = require('sanitize-html')
-const { validate } = require('./models/Review')
 
 const extension = (joi) => ({
     type: 'string',
